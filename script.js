@@ -124,7 +124,10 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener("click", start);
+document.getElementById('starts').addEventListener("click", start)
+// startBtn.addEventListener("click",function(){
+//   console.log('startbtn clicked')
+// } );
 
 // If history exists, show it
 displayHistory();
