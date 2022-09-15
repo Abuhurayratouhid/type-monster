@@ -47,6 +47,8 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    // errorCount++;
+    // for (let i = 0; i === error; errorCount++)
   }
 
   // check if given question text is equal to user typed text
@@ -69,14 +71,15 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
+  
 
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
   // modalBackground.classList.add('center');
-  modalContainer.classList.add('center');
+  // modalContainer.classList.add('center');
   modalBackground.classList.toggle("hidden");
-  modalBackground.classList.add('center')
+  // modalBackground.classList.add('center')
   // clear user text
   display.innerHTML = "";
   // make it inactive
@@ -141,9 +144,10 @@ displayHistory();
 
 // Show typing time spent
 setInterval(() => {
-  const currentTime = new Date().getTime();
+  const  currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
+  const justSecound = Math.round(timeSpent)
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? justSecound : 0} seconds`;
 }, 1000);
