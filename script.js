@@ -71,7 +71,7 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
-  
+  const onlySecound = Math.round(timeTaken)
 
   // show result modal
   resultModal.innerHTML = "";
@@ -87,7 +87,7 @@ const gameOver = () => {
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>You took: <span class="bold">${onlySecound}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
