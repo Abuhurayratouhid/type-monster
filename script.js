@@ -4,6 +4,7 @@ const startBtn = document.getElementById("start");
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
+const modalContainer =document.getElementById('modal-container');
 
 // variables
 let userText = "";
@@ -72,7 +73,10 @@ const gameOver = () => {
   // show result modal
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
+  // modalBackground.classList.add('center');
+  modalContainer.classList.add('center');
   modalBackground.classList.toggle("hidden");
+  modalBackground.classList.add('center')
   // clear user text
   display.innerHTML = "";
   // make it inactive

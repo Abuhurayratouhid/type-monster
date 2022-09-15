@@ -63,8 +63,8 @@ body {
 }
 #result {
   position: fixed;
-  top: 10%; 
-  left: 10%;
+  top: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -95,6 +95,7 @@ body {
 }
 .hidden {
   display: none;
+  
 }
 .title {
   text-align: center;
@@ -168,6 +169,7 @@ button {
 }
 
 #modal-background {
+  /* margin-top: 200px; */
   background: rgb(255, 255, 255);
   background: linear-gradient(
     92.49deg,
@@ -189,4 +191,7 @@ button {
   .card {
     flex-direction: column;
   }
+}
+.center{
+  margin-top: 200px;
 }
